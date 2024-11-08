@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NR Creation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section with Logo and Navigation -->
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Logo" class="logo">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for items...">
+            </div>
+            <div class="nav-buttons">
+                <button onclick="goHome()">Home</button>
+                <button onclick="goCart()">Cart</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Item Display Section -->
+    <div class="item-grid" id="itemGrid">
+        <!-- Items will be dynamically inserted here -->
+    </div>
+
+    <!-- Single Add to Cart Button -->
+    <button class="cart-floating-btn" onclick="addAllToCart()">Add Selected Items to Cart</button>
+
+    <script src="compound.js"></script>
+</body>
+</html>

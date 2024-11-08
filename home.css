@@ -1,0 +1,229 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f0f2f5; /* Softer background */
+}
+
+/* Main Screen Container */
+.screen {
+    max-width: 100%;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Header */
+.header {
+    background-color: #f44336; /* Bright, contrasting header */
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 160px;
+    height: auto;
+}
+
+/* Cart Button */
+.cart-button {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background-color: #292929;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cart-button i {
+    margin-right: 10px;
+}
+
+.cart-button:hover {
+    background-color: #333333;
+    transform: translateY(-3px);
+}
+
+/* Main Content */
+.main-content {
+    padding: 30px 15px;
+}
+
+/* Section for Cakes & Chocolates */
+.single-category {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.single-category a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.single-category .square {
+    width: 120px;
+    height: 120px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.single-category .square:hover {
+    border-color: #e73e30;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.single-category .square img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+}
+
+.single-category p {
+    font-size: 15px;
+    font-weight: bold;
+    color: #292929;
+}
+
+/* Explore Button */
+.explore-container {
+    display: flex;
+    justify-content: center;
+    margin: 7   px 0;
+}
+
+.explore-button {
+    padding: 15px 25px;
+    background-color: #f44336;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 5px 10px rgb(255, 255, 255);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.explore-button:hover {
+    background-color: #e73e30;
+    transform: translateY(-4px);
+}
+
+/* Category Container */
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.circle {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.circle:hover {
+    border-color: #f44336;
+    box-shadow: 0px 6px 12px #ffffff;
+}
+
+.circle img {
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+}
+
+.category p {
+    font-size: 16px;
+    color: #292929;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer-simple {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px 0;
+    font-size: 14px;
+    background-color: #292929;
+    color: white;
+    border-radius: 0 0 10px 10px;
+}
+
+.footer-simple a {
+    color: #25d366; /* WhatsApp green */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.footer-simple i {
+    margin-left: 5px;
+}
