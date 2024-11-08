@@ -70,7 +70,7 @@ function placeOrder() {
     }
 
     // Construct the order message
-    let orderMessage = 'Order details:\n\n';
+    let orderMessage = 'I would like to Order the below items:\n\n';
     cartItems.forEach(item => {
         orderMessage += `${item.name} - Quantity: ${item.qty}\n`;
     });
