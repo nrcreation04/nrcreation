@@ -6,6 +6,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header Styling */
 header {
     background-color: #f44336;
     padding: 15px;
@@ -18,20 +19,7 @@ header {
     height: 50px;
 }
 
-.home {
-    padding: 8px;
-    font-size: 18px;
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Main Content Area */
 main {
     padding: 20px;
     margin-bottom: 100px; /* Adding space for the fixed footer */
@@ -45,14 +33,17 @@ h1 {
     font-weight: 600;
 }
 
-/* Cart items arranged in a grid layout with clear design */
+/* Cart Grid Layout */
 .cart-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
     padding: 20px;
+   max-height: 500px; /* Set a maximum height for the cart grid */
+   overflow-y: auto; /* Enable scrolling if items exceed the max height */
 }
 
+/* Individual Cart Item Styling */
 .cart-item {
     display: flex;
     align-items: center;
@@ -90,6 +81,7 @@ h1 {
     margin-bottom: 10px;
 }
 
+/* Quantity Container Styling */
 .qty-container {
     display: flex;
     align-items: center;
@@ -100,7 +92,7 @@ h1 {
     color: #555;
 }
 
-/* Pickup date and time section */
+/* Pickup Date and Time Section */
 .pickup {
     text-align: center;
     margin: 20px 0; /* Adjust for spacing at the top */
@@ -120,8 +112,7 @@ h1 {
     width: 250px;
 }
 
-
-/* Button container styling for side-by-side layout */
+/* Button Container Styling */
 .button-container {
     display: flex;
     justify-content: center;
@@ -129,7 +120,7 @@ h1 {
     padding: 20px;
 }
 
-/* Back and Place Order buttons */
+/* Back and Place Order Buttons */
 .back-button, .place-order-button {
     padding: 15px 30px;
     font-size: 18px;
@@ -155,8 +146,7 @@ h1 {
     background-color: #d32f2f;
 }
 
-
-/* Remove button styling */
+/* Remove Button Styling */
 .remove-item {
     background-color: #e53935;
     color: white;
@@ -170,4 +160,19 @@ h1 {
 
 .remove-item:hover {
     background-color: #c62828;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 600px) {
+    /* Adjust the cart layout for wider screens */
+    .cart-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on wider screens */
+    }
+}
+
+@media (min-width: 900px) {
+    /* Further adjustment for larger screens */
+    .cart-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on even wider screens */
+    }
 }
