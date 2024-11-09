@@ -11,6 +11,9 @@ function displayCartItems() {
     const cartGrid = document.getElementById('cartGrid');
     cartGrid.innerHTML = ''; // Clear existing items
 
+    console.log("Cart items length:", cartItems.length); // Debugging: Check the number of items
+    console.log(cartItems); // Debugging: Log all the cart items
+
     // If cart is empty, show a message
     if (cartItems.length === 0) {
         cartGrid.innerHTML = '<p>Your cart is empty.</p>';
@@ -38,9 +41,8 @@ function displayCartItems() {
     });
 }
 
-// Function to update quantity of an item in the cart
+// Function to update the quantity of an item in the cart
 function updateQuantity(index, change) {
-    // Only update if the resulting quantity is positive
     if (cartItems[index].qty + change > 0) {
         cartItems[index].qty += change;
         saveCart(); // Save updated cart to localStorage
@@ -51,6 +53,23 @@ function updateQuantity(index, change) {
 // Function to remove an item from the cart
 function removeItem(index) {
     cartItems.splice(index, 1); // Remove item at the specified index
+    saveCart(); // Save updated cart to localStorage
+    displayCartItems(); // Refresh the cart display
+}
+
+// Function to add an item to the cart (example)
+function addItemToCart(item) {
+    // Check if item is already in the cart
+    const existingItem = cartItems.find(cartItem => cartItem.name === item.name);
+    if (existingItem) {
+        // If item already exists, increase quantity
+        existingItem.qty += item.qty;
+    } else {
+        // If item doesn't exist, add it to the cart
+        cartItems.push(item);
+    }
+
+    console.log("Item added to cart:", item); // Debugging log
     saveCart(); // Save updated cart to localStorage
     displayCartItems(); // Refresh the cart display
 }
@@ -70,7 +89,7 @@ function placeOrder() {
     }
 
     // Construct the order message
-    let orderMessage = 'I would like to Order the below items:\n\n';
+    let orderMessage = 'I would like to order the below items:\n\n';
     cartItems.forEach(item => {
         orderMessage += `${item.name} - Quantity: ${item.qty}\n`;
     });
