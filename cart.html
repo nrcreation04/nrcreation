@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="stylescart.css">
+</head>
+<body>
+    <!-- Header Section with Logo and Navigation -->
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+    </header>
+
+    <!-- Pickup Date and Time Section -->
+    <div class="pickup">
+        <label for="pickupDateTime">Select Pickup Date & Time:</label>
+        <input type="datetime-local" id="pickupDateTime" required>
+    </div>
+
+    <!-- Cart Display Section -->
+    <main>
+        <h1>Your Cart</h1>
+        <div id="cartGrid" class="cart-grid">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="button-container">
+            <button class="back-button" onclick="goBack()">Back to Shop</button>
+            <button class="place-order-button" onclick="placeOrder()">Place Order</button>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
